@@ -16,7 +16,7 @@ from QueryDifficultyBasic.QueryDifficultyBase import *
 from AdhocEva.AdhocMeasure import *
 
 import sys
-
+import json
 
 def CalcCumulatedPerform(lQOrder,hPerQEva):
     lCumulatedP = []
@@ -25,6 +25,8 @@ def CalcCumulatedPerform(lQOrder,hPerQEva):
     for qid in lQOrder:
         if qid in hPerQEva:
             lOrderedP.append(hPerQEva[qid])
+    
+    print "Q ordr:\n%s" %(json.dumps(lOrderedP))
     
     for i in range(len(lOrderedP)):
         lCumulatedP.append(AdhocMeasureC.AdhocMeasureMean(lOrderedP[:i + 1]))
@@ -45,7 +47,7 @@ lQD = QD.hQD.items()
 lQD.sort(key = lambda item:item[1])
 lInc = [item[0] for item in lQD]
 
-lQD.sort(key = lambda item:item[1],reverse = False)
+lQD.sort(key = lambda item:item[1],reverse = True)
 lDes = [item[0] for item in lQD]
 
 
