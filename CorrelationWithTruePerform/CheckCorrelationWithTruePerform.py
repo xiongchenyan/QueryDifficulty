@@ -11,7 +11,7 @@ calc pearson, and output
 import site
 site.addsitedir('/bos/usr0/cx/PyCode/Geektools')
 site.addsitedir('/bos/usr0/cx/PyCode/cxPyLib')
-
+site.addsitedir('/bos/usr0/cx/PyCode/QueryDifficulty')
 from ResultAnalysis.PearsonCoefficient import *
 from QueryDifficultyBasic.QueryDifficultyBase import *
 from AdhocEva.AdhocMeasure import *
