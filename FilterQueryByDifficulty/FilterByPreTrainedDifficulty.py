@@ -27,7 +27,7 @@ def CalcCumulatedPerform(lQOrder,hPerQEva):
             lOrderedP.append(hPerQEva[qid])
     
     for i in range(len(lOrderedP)):
-        lCumulatedP.append(lOrderedP[:i + 1])
+        lCumulatedP.append(AdhocMeasureC.AdhocMeasureMean(lOrderedP[:i + 1]))
     return lCumulatedP
 
 
