@@ -26,7 +26,7 @@ def CalcCumulatedPerform(lQOrder,hPerQEva):
         if qid in hPerQEva:
             lOrderedP.append(hPerQEva[qid])
     
-    print "Q ordr:\n%s" %(json.dumps(lOrderedP))
+    print "Q ordr:\n%s" %(json.dumps(lQOrder))
     
     for i in range(len(lOrderedP)):
         lCumulatedP.append(AdhocMeasureC.AdhocMeasureMean(lOrderedP[:i + 1]))
