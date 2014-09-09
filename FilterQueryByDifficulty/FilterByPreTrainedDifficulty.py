@@ -24,7 +24,7 @@ def CalcCumulatedPerform(lQOrder,hPerQEva):
     
     for qid in lQOrder:
         if qid in hPerQEva:
-            lOrderedP = hPerQEva[qid]
+            lOrderedP.append(hPerQEva[qid])
     
     for i in range(len(lOrderedP)):
         lCumulatedP.append(lOrderedP[:i + 1])
