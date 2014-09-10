@@ -55,7 +55,7 @@ for qid,score in lQDScore[:Mid]:
     print >>out, '%d %f' %(qid,score)
     
 out.close()
-out  = open(sys.argv[2] + 'res2','w')
+out  = open(sys.argv[2] + '/res2','w')
 for qid,score in lQDScore[Mid:]:
     print >> out, '%d %f' %(qid,score)
 out.close()
